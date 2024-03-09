@@ -1,17 +1,17 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\selcu\\Masa\u00FCst\u00FC\\WorkAllDay\\EEMuh\\II. YY\\G\u00F6rsel Programlama\\C#DerstenBa\u011F\u0131ms\u0131zlar\\KarakterDonusum\\",
+  "WorkspaceRootPath": "C:\\Users\\selcu\\Masa\u00FCst\u00FC\\WorkAllDay\\EEMuh\\II. YY\\G\u00F6rsel Programlama\\C#DerstenBa\u011F\u0131ms\u0131zlar\\AracKutusu\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{B7464B92-DCAD-41E9-A506-71A82D50F0DF}|KarakterDonusum.csproj|c:\\users\\selcu\\masa\u00FCst\u00FC\\workallday\\eemuh\\ii. yy\\g\u00F6rsel programlama\\c#derstenba\u011F\u0131ms\u0131zlar\\karakterdonusum\\anasayfa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{B7464B92-DCAD-41E9-A506-71A82D50F0DF}|KarakterDonusum.csproj|c:\\users\\selcu\\masa\u00FCst\u00FC\\workallday\\eemuh\\ii. yy\\g\u00F6rsel programlama\\c#derstenba\u011F\u0131ms\u0131zlar\\arackutusu\\anasayfa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{B7464B92-DCAD-41E9-A506-71A82D50F0DF}|KarakterDonusum.csproj|solutionrelative:anasayfa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B7464B92-DCAD-41E9-A506-71A82D50F0DF}|KarakterDonusum.csproj|C:\\Users\\selcu\\Masa\u00FCst\u00FC\\WorkAllDay\\EEMuh\\II. YY\\G\u00F6rsel Programlama\\C#DerstenBa\u011F\u0131ms\u0131zlar\\KarakterDonusum\\anasayfa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{B7464B92-DCAD-41E9-A506-71A82D50F0DF}|KarakterDonusum.csproj|C:\\Users\\selcu\\Masa\u00FCst\u00FC\\WorkAllDay\\EEMuh\\II. YY\\G\u00F6rsel Programlama\\C#DerstenBa\u011F\u0131ms\u0131zlar\\AracKutusu\\anasayfa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B7464B92-DCAD-41E9-A506-71A82D50F0DF}|KarakterDonusum.csproj|solutionrelative:anasayfa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B7464B92-DCAD-41E9-A506-71A82D50F0DF}|KarakterDonusum.csproj|C:\\Users\\selcu\\Masa\u00FCst\u00FC\\WorkAllDay\\EEMuh\\II. YY\\G\u00F6rsel Programlama\\C#DerstenBa\u011F\u0131ms\u0131zlar\\KarakterDonusum\\fn.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{B7464B92-DCAD-41E9-A506-71A82D50F0DF}|KarakterDonusum.csproj|C:\\Users\\selcu\\Masa\u00FCst\u00FC\\WorkAllDay\\EEMuh\\II. YY\\G\u00F6rsel Programlama\\C#DerstenBa\u011F\u0131ms\u0131zlar\\AracKutusu\\fn.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B7464B92-DCAD-41E9-A506-71A82D50F0DF}|KarakterDonusum.csproj|solutionrelative:fn.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -28,9 +28,9 @@
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "AnaSayfa.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\selcu\\Masa\u00FCst\u00FC\\WorkAllDay\\EEMuh\\II. YY\\G\u00F6rsel Programlama\\C#DerstenBa\u011F\u0131ms\u0131zlar\\KarakterDonusum\\AnaSayfa.cs",
+              "DocumentMoniker": "C:\\Users\\selcu\\Masa\u00FCst\u00FC\\WorkAllDay\\EEMuh\\II. YY\\G\u00F6rsel Programlama\\C#DerstenBa\u011F\u0131ms\u0131zlar\\AracKutusu\\AnaSayfa.cs",
               "RelativeDocumentMoniker": "AnaSayfa.cs",
-              "ToolTip": "C:\\Users\\selcu\\Masa\u00FCst\u00FC\\WorkAllDay\\EEMuh\\II. YY\\G\u00F6rsel Programlama\\C#DerstenBa\u011F\u0131ms\u0131zlar\\KarakterDonusum\\AnaSayfa.cs [Design]",
+              "ToolTip": "C:\\Users\\selcu\\Masa\u00FCst\u00FC\\WorkAllDay\\EEMuh\\II. YY\\G\u00F6rsel Programlama\\C#DerstenBa\u011F\u0131ms\u0131zlar\\AracKutusu\\AnaSayfa.cs [Design]",
               "RelativeToolTip": "AnaSayfa.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-02-25T16:17:34.086Z",
@@ -40,22 +40,21 @@
               "$type": "Document",
               "DocumentIndex": 1,
               "Title": "AnaSayfa.cs",
-              "DocumentMoniker": "C:\\Users\\selcu\\Masa\u00FCst\u00FC\\WorkAllDay\\EEMuh\\II. YY\\G\u00F6rsel Programlama\\C#DerstenBa\u011F\u0131ms\u0131zlar\\KarakterDonusum\\AnaSayfa.cs",
+              "DocumentMoniker": "C:\\Users\\selcu\\Masa\u00FCst\u00FC\\WorkAllDay\\EEMuh\\II. YY\\G\u00F6rsel Programlama\\C#DerstenBa\u011F\u0131ms\u0131zlar\\AracKutusu\\AnaSayfa.cs",
               "RelativeDocumentMoniker": "AnaSayfa.cs",
-              "ToolTip": "C:\\Users\\selcu\\Masa\u00FCst\u00FC\\WorkAllDay\\EEMuh\\II. YY\\G\u00F6rsel Programlama\\C#DerstenBa\u011F\u0131ms\u0131zlar\\KarakterDonusum\\AnaSayfa.cs",
+              "ToolTip": "C:\\Users\\selcu\\Masa\u00FCst\u00FC\\WorkAllDay\\EEMuh\\II. YY\\G\u00F6rsel Programlama\\C#DerstenBa\u011F\u0131ms\u0131zlar\\AracKutusu\\AnaSayfa.cs",
               "RelativeToolTip": "AnaSayfa.cs",
               "ViewState": "AQIAABsAAAAAAAAAAAAwwDIAAABEAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-02-25T17:36:01.308Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-02-25T17:36:01.308Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
               "Title": "Fn.cs",
-              "DocumentMoniker": "C:\\Users\\selcu\\Masa\u00FCst\u00FC\\WorkAllDay\\EEMuh\\II. YY\\G\u00F6rsel Programlama\\C#DerstenBa\u011F\u0131ms\u0131zlar\\KarakterDonusum\\Fn.cs",
+              "DocumentMoniker": "C:\\Users\\selcu\\Masa\u00FCst\u00FC\\WorkAllDay\\EEMuh\\II. YY\\G\u00F6rsel Programlama\\C#DerstenBa\u011F\u0131ms\u0131zlar\\AracKutusu\\Fn.cs",
               "RelativeDocumentMoniker": "Fn.cs",
-              "ToolTip": "C:\\Users\\selcu\\Masa\u00FCst\u00FC\\WorkAllDay\\EEMuh\\II. YY\\G\u00F6rsel Programlama\\C#DerstenBa\u011F\u0131ms\u0131zlar\\KarakterDonusum\\Fn.cs",
+              "ToolTip": "C:\\Users\\selcu\\Masa\u00FCst\u00FC\\WorkAllDay\\EEMuh\\II. YY\\G\u00F6rsel Programlama\\C#DerstenBa\u011F\u0131ms\u0131zlar\\AracKutusu\\Fn.cs",
               "RelativeToolTip": "Fn.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",

@@ -81,7 +81,7 @@
             // textBGirdi
             // 
             this.textBGirdi.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBGirdi.Location = new System.Drawing.Point(272, 71);
+            this.textBGirdi.Location = new System.Drawing.Point(233, 71);
             this.textBGirdi.Name = "textBGirdi";
             this.textBGirdi.Size = new System.Drawing.Size(286, 38);
             this.textBGirdi.TabIndex = 4;
@@ -90,7 +90,7 @@
             // textBSyc
             // 
             this.textBSyc.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBSyc.Location = new System.Drawing.Point(464, 128);
+            this.textBSyc.Location = new System.Drawing.Point(425, 128);
             this.textBSyc.Name = "textBSyc";
             this.textBSyc.ReadOnly = true;
             this.textBSyc.Size = new System.Drawing.Size(94, 38);
@@ -100,7 +100,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label3.Location = new System.Drawing.Point(305, 50);
+            this.label3.Location = new System.Drawing.Point(266, 50);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(124, 18);
             this.label3.TabIndex = 6;
@@ -110,7 +110,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(570, 254);
+            this.ClientSize = new System.Drawing.Size(533, 254);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.textBSyc);
             this.Controls.Add(this.textBGirdi);
