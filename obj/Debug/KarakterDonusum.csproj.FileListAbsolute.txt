@@ -1,0 +1,10 @@
+C:\Users\selcu\Masaüstü\WorkAllDay\EEMuh\II. YY\Görsel Programlama\C#DerstenBağımsızlar\KarakterDonusum\obj\Debug\KarakterDonusum.csproj.AssemblyReference.cache
+C:\Users\selcu\Masaüstü\WorkAllDay\EEMuh\II. YY\Görsel Programlama\C#DerstenBağımsızlar\KarakterDonusum\obj\Debug\KarakterDonusum.AnaSayfa.resources
+C:\Users\selcu\Masaüstü\WorkAllDay\EEMuh\II. YY\Görsel Programlama\C#DerstenBağımsızlar\KarakterDonusum\obj\Debug\KarakterDonusum.Properties.Resources.resources
+C:\Users\selcu\Masaüstü\WorkAllDay\EEMuh\II. YY\Görsel Programlama\C#DerstenBağımsızlar\KarakterDonusum\obj\Debug\KarakterDonusum.csproj.GenerateResource.cache
+C:\Users\selcu\Masaüstü\WorkAllDay\EEMuh\II. YY\Görsel Programlama\C#DerstenBağımsızlar\KarakterDonusum\obj\Debug\KarakterDonusum.csproj.CoreCompileInputs.cache
+C:\Users\selcu\Masaüstü\WorkAllDay\EEMuh\II. YY\Görsel Programlama\C#DerstenBağımsızlar\KarakterDonusum\bin\Debug\AracKutusu.exe.config
+C:\Users\selcu\Masaüstü\WorkAllDay\EEMuh\II. YY\Görsel Programlama\C#DerstenBağımsızlar\KarakterDonusum\bin\Debug\AracKutusu.exe
+C:\Users\selcu\Masaüstü\WorkAllDay\EEMuh\II. YY\Görsel Programlama\C#DerstenBağımsızlar\KarakterDonusum\bin\Debug\AracKutusu.pdb
+C:\Users\selcu\Masaüstü\WorkAllDay\EEMuh\II. YY\Görsel Programlama\C#DerstenBağımsızlar\KarakterDonusum\obj\Debug\AracKutusu.exe
+C:\Users\selcu\Masaüstü\WorkAllDay\EEMuh\II. YY\Görsel Programlama\C#DerstenBağımsızlar\KarakterDonusum\obj\Debug\AracKutusu.pdb
