@@ -1,0 +1,6 @@
+Kelime ayıklama programı
+- kaynak ve hedef .txt dosyası seç
+- hedef dosyasına eklenmesini istediğin kelimelerin harf uzunluğunu al
+- başlat tuşuna bas
+- prgores barda kaç satırdan kaçının kaldığını takip et
+- program bittiğinde bir mesaj ile uyarını yap
