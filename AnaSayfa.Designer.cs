@@ -47,8 +47,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.textBSyc = new System.Windows.Forms.TextBox();
             this.textBGirdi = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.tbChar = new System.Windows.Forms.TextBox();
+            this.tbAsciiCode = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.tabMain = new System.Windows.Forms.TabControl();
@@ -223,8 +223,8 @@
             this.tabPage1.Controls.Add(this.label3);
             this.tabPage1.Controls.Add(this.textBSyc);
             this.tabPage1.Controls.Add(this.textBGirdi);
-            this.tabPage1.Controls.Add(this.textBox2);
-            this.tabPage1.Controls.Add(this.textBox1);
+            this.tabPage1.Controls.Add(this.tbChar);
+            this.tabPage1.Controls.Add(this.tbAsciiCode);
             this.tabPage1.Controls.Add(this.label2);
             this.tabPage1.Controls.Add(this.label1);
             this.tabPage1.Location = new System.Drawing.Point(4, 25);
@@ -266,23 +266,27 @@
             this.textBGirdi.Size = new System.Drawing.Size(380, 38);
             this.textBGirdi.TabIndex = 11;
             // 
-            // textBox2
+            // tbChar
             // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox2.Location = new System.Drawing.Point(21, 143);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(244, 38);
-            this.textBox2.TabIndex = 8;
+            this.tbChar.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.tbChar.Location = new System.Drawing.Point(21, 143);
+            this.tbChar.Margin = new System.Windows.Forms.Padding(4);
+            this.tbChar.Name = "tbChar";
+            this.tbChar.Size = new System.Drawing.Size(244, 38);
+            this.tbChar.TabIndex = 8;
+            this.tbChar.Click += new System.EventHandler(this.tbChar_Click);
+            this.tbChar.KeyDown += new System.Windows.Forms.KeyEventHandler(this.tbChar_KeyDown);
             // 
-            // textBox1
+            // tbAsciiCode
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox1.Location = new System.Drawing.Point(21, 47);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(244, 38);
-            this.textBox1.TabIndex = 7;
+            this.tbAsciiCode.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.tbAsciiCode.Location = new System.Drawing.Point(21, 47);
+            this.tbAsciiCode.Margin = new System.Windows.Forms.Padding(4);
+            this.tbAsciiCode.Name = "tbAsciiCode";
+            this.tbAsciiCode.Size = new System.Drawing.Size(244, 38);
+            this.tbAsciiCode.TabIndex = 7;
+            this.tbAsciiCode.Click += new System.EventHandler(this.tbAsciiCode_Click);
+            this.tbAsciiCode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.tbAsciiCode_KeyDown);
             // 
             // label2
             // 
@@ -332,6 +336,7 @@
             this.MinimizeBox = false;
             this.Name = "AnaSayfa";
             this.Text = "Araç Kutusu";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.AnaSayfa_FormClosing);
             this.Load += new System.EventHandler(this.AnaSayfa_Load);
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
@@ -352,8 +357,8 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox textBSyc;
         private System.Windows.Forms.TextBox textBGirdi;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox tbChar;
+        private System.Windows.Forms.TextBox tbAsciiCode;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TabControl tabMain;

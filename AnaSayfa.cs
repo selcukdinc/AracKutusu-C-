@@ -16,86 +16,50 @@ using System.Threading;
 
 namespace KarakterDonusum
 {
-
-    //public class RoundedButton : Button
-    //{
-    //    GraphicsPath GetRoundPath(RectangleF Rect, int radius)
-    //    {
-    //        float m = 2.75F;
-    //        float r2 = radius / 2f;
-    //        GraphicsPath GraphPath = new GraphicsPath();
-
-    //        GraphPath.AddArc(Rect.X + m, Rect.Y + m, radius, radius, 180, 90);
-    //        GraphPath.AddLine(Rect.X + r2 + m, Rect.Y + m, Rect.Width - r2 - m, Rect.Y + m);
-    //        GraphPath.AddArc(Rect.X + Rect.Width - radius - m, Rect.Y + m, radius, radius, 270, 90);
-    //        GraphPath.AddLine(Rect.Width - m, Rect.Y + r2, Rect.Width - m, Rect.Height - r2 - m);
-    //        GraphPath.AddArc(Rect.X + Rect.Width - radius - m,
-    //                       Rect.Y + Rect.Height - radius - m, radius, radius, 0, 90);
-    //        GraphPath.AddLine(Rect.Width - r2 - m, Rect.Height - m, Rect.X + r2 - m, Rect.Height - m);
-    //        GraphPath.AddArc(Rect.X + m, Rect.Y + Rect.Height - radius - m, radius, radius, 90, 90);
-    //        GraphPath.AddLine(Rect.X + m, Rect.Height - r2 - m, Rect.X + m, Rect.Y + r2 + m);
-
-    //        GraphPath.CloseFigure();
-    //        return GraphPath;
-    //    }
-
-    //    protected override void OnPaint(PaintEventArgs e)
-    //    {
-    //        int borderRadius = 50;
-    //        float borderThickness = 1.75f;
-    //        base.OnPaint(e);
-    //        RectangleF Rect = new RectangleF(0, 0, this.Width, this.Height);
-    //        GraphicsPath GraphPath = GetRoundPath(Rect, borderRadius);
-
-    //        this.Region = new Region(GraphPath);
-    //        using (Pen pen = new Pen(Color.Silver, borderThickness))
-    //        {
-    //            pen.Alignment = PenAlignment.Inset;
-    //            e.Graphics.DrawPath(pen, GraphPath);
-    //        }
-    //    }
-    //}
-        public partial class AnaSayfa : Form
+    public partial class AnaSayfa : Form
     {
-            
-
-            public AnaSayfa()
+        public AnaSayfa()
         {
             InitializeComponent();
         }
 
         private void AnaSayfa_Load(object sender, EventArgs e)
         {
-            Fn.TextBDeg(textBox2, textBox1);
+            Fn.TextBDeg(tbChar, tbAsciiCode);
             wordPickerReset();
             tabMain.SelectedIndex = 1;
             rdDirectory.Select();
+            Control.CheckForIllegalCrossThreadCalls = false;
+            t1 = new Thread(new ThreadStart(wordPickerLabelSet));
         }
 
-        
+        private Thread t1;
+        bool Source = false, Target = false;
+        bool sourceDirectory;
+        string srcLocation, trgtLocation;
 
-        private void textBox1_Click(object sender, EventArgs e)
-        {
-            Fn.TextBDeg(textBox2, textBox1);
+        private void tbAsciiCode_Click(object sender, EventArgs e)
+        {// tbAsciiCode
+            Fn.TextBDeg(tbChar, tbAsciiCode);
         }
 
-        private void textBox2_Click(object sender, EventArgs e)
-        {
-            Fn.TextBDeg(textBox1, textBox2);
+        private void tbChar_Click(object sender, EventArgs e)
+        {// tbChar
+            Fn.TextBDeg(tbAsciiCode, tbChar);
         }
 
-        private void textBox1_KeyDown(object sender, KeyEventArgs e)
+        private void tbAsciiCode_KeyDown(object sender, KeyEventArgs e)
         {
-            textBox2.Text = Convert.ToString((char)Convert.ToDouble(0 + textBox1.Text));
+            tbChar.Text = Convert.ToString((char)Convert.ToDouble(0 + tbAsciiCode.Text));
         }
 
-        private void textBox2_KeyDown(object sender, KeyEventArgs e)
+        private void tbChar_KeyDown(object sender, KeyEventArgs e)
         {
 
-            textBox1.Text = "";
-            textBox2.Text = "";
+            tbAsciiCode.Text = "";
+            tbChar.Text = "";
             int ascii = e.KeyValue;
-            textBox1.Text = Convert.ToString(ascii);
+            tbAsciiCode.Text = Convert.ToString(ascii);
         }
 
         private void textBGirdi_KeyPress(object sender, KeyPressEventArgs e)
@@ -163,60 +127,67 @@ namespace KarakterDonusum
             }
         }
 
-        bool Source = false, Target = false;
-
-        //string il;
-        //    StreamReader sr = new StreamReader(@".\iller\iller.txt");
-        //    try
-        //    {
-        //        while ((il = sr.ReadLine()) != null)
-        //        {
-        //            cmbIller.Items.Add(il);
-        //        }
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        MessageBox.Show(ex.ToString());
-        //    }
-        //    finally 
-        //    { 
-        //        sr.Close(); 
-        //    }
-
-        private void btnStart_Click(object sender, EventArgs e)
+        private void wordPickerLabelSet()
         {
-            if(Source && Target && mtbCharValue.Text != "") {
+            lblStatus.ForeColor = Color.Lime;
+            while (true)
+            {
+                Console.WriteLine("wordPickerLabelSet method is alive ;)");
+                lblStatus.Text = $"{globalCount} / {globalWordsLength} kelime kaldı";
+            }
+        }
+
+        private void trueFileRW()
+        {// if sourceDirectory ture [folder selected] then this method works, and read line by line source text file and selected word length if match then write target file line by line
+            foreach (string item in clbSources.Items)
+            {
+                //MessageBox.Show($"{item}");
+                wordPickerLabelSet(Lbl.Highlight, true, "", Convert.ToInt32(mtbCharValue.Text), -1, -1);
+                StreamReader sr = new StreamReader(item);
+                StreamWriter sw = new StreamWriter(trgtLocation, true);
+                string word;
+                string[] words = File.ReadAllLines(item);
+                int count = 0;
+
+                pbWordProg.Step = 1;
+                pbWordProg.Maximum = words.Length;
+                globalWordsLength = words.Length;
+                while ((word = sr.ReadLine()) != null)
+                {
+                    //MessageBox.Show($"Kelime : '{word}'\nKelime uzunluğu : {word.Length}", $"Dosyada {words.Length} adet kelime var");
+
+                    string result = word.Trim();
+                    result = Regex.Replace(result, @"\s", "");
+
+                    if (result.Length == Convert.ToInt32(mtbCharValue.Text))
+                        sw.WriteLine(result);
+                    //++globalCount;
+                    this.Invoke(new Action(() => {
+                        wordPickerLabelSet(Lbl.Status, true, "", -1, ++count, words.Length);
+                        pbWordProg.Value = count;
+                    }));
+                }
+                sw.Close();
+                sr.Close();
+            }
+        }
+
+        int globalCount = 0, globalWordsLength = 0;
+        private async void btnStart_Click(object sender, EventArgs e)
+        {
+            if(Source && Target && mtbCharValue.Text != "") 
+            {
                 //FileStream fsRead = new FileStream(srcLocation, FileMode.Open);
                 //FileStream fsWrite = new FileStream(trgtLocation, FileMode.Open);
-                if (sourceDirectory) {
-                    foreach (string item in clbSources.Items)
+                if (sourceDirectory) 
+                {// if source directory is a folder then if will be true
+                    if (!t1.IsAlive)
                     {
-                        //MessageBox.Show($"{item}");
-                        wordPickerLabelSet(Lbl.Highlight, true, "", Convert.ToInt32(mtbCharValue.Text), -1, -1);
-                        StreamReader sr = new StreamReader(item);
-                        StreamWriter sw = new StreamWriter(trgtLocation, true);
-                        string word;
-                        string[] words = File.ReadAllLines(item);
-                        int count = 0;
-                        pbWordProg.Step = 1;
-                        pbWordProg.Maximum = words.Length;
-                        while ((word = sr.ReadLine()) != null)
-                        {
-                            //MessageBox.Show($"Kelime : '{word}'\nKelime uzunluğu : {word.Length}", $"Dosyada {words.Length} adet kelime var");
-                            
-                            string result = word.Trim();
-                            result = Regex.Replace(result, @"\s", "");
-
-                            if (result.Length == Convert.ToInt32(mtbCharValue.Text))
-                                sw.WriteLine(result);
-
-                            wordPickerLabelSet(Lbl.Status, true, "", -1, ++count, words.Length);
-                            pbWordProg.Value = count;
-                        }
-                        sw.Close();
-                        sr.Close();
+                        await Task.Run(() => trueFileRW());
                     }
-                } else {
+                } 
+                else 
+                {
                     wordPickerLabelSet(Lbl.Highlight, true, "", Convert.ToInt32(mtbCharValue.Text), -1, -1);
                     StreamReader sr = new StreamReader(srcLocation);
                     StreamWriter sw = new StreamWriter(trgtLocation, true);
@@ -251,9 +222,11 @@ namespace KarakterDonusum
             }
         }
 
-        string srcLocation, trgtLocation;
-
-
+        private void AnaSayfa_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (t1.IsAlive)
+                t1.Abort();
+        }
 
         private void btnSelectSource_Click(object sender, EventArgs e)
         {
@@ -271,18 +244,8 @@ namespace KarakterDonusum
             } else {
                 selectFolder(btnSelectSource, null);
             }
-
-            
-
         }
-        //FolderBrowserDialog fdb = new FolderBrowserDialog();
-        //if(fdb.ShowDialog() == DialogResult.OK)
-        //{
-        //    clbSources.Items.Clear();
-        //    clbSources.Items.AddRange(Directory.GetFiles(fdb.SelectedPath));
-
-        //}
-        bool sourceDirectory;
+        
         private void rdSelector(object sender, EventArgs e)
         {
             RadioButton rd = (RadioButton)sender;
@@ -333,7 +296,5 @@ namespace KarakterDonusum
         
         }
     }
-
-   
 
 }
