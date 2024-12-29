@@ -1,7 +1,7 @@
 Projelerden bağımsız dönüşüm, karakter sayma ve gelecekte ihtiyaç duyacağım dönüşümleri bu projede toplayacağım.
 
 ÖZELLİKLER
-- ASCII <-> KArakter Dönüşümü
+- ASCII <-> Karakter Dönüşümü
 - String ifadede kaç karakter var sayar
 - Seçili klasördeki text dosyalarını satır satır kontrol eder ve karakter seçili karakter sayısına göre kontrol eder, seçili karakter sayısına uyma durumunda seçili text dosyasına yazma işlemini gerçekleştirir
 
