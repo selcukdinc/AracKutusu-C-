@@ -7,3 +7,16 @@ Projelerden bağımsız dönüşüm, karakter sayma ve gelecekte ihtiyaç duyaca
 
 https://github.com/selcukdinc/AracKutusu-CSharp/assets/149238218/1d16e796-138f-430d-b388-f3ead0acdb48
 
+# Branch Information
+
+
+
+- main
+  -   - 14.01.2025 - aae0541 - Create main.yml
+    - No description provided.
+  -   - 29.12.2024 - 8c069db - Update README.md
+    - No description provided.
+  -   - 09.07.2024 - b94cf31 - Kelime seçici demo videosu yüklendi
+    - No description provided.
+
+
