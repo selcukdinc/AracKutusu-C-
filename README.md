@@ -12,11 +12,11 @@ https://github.com/selcukdinc/AracKutusu-CSharp/assets/149238218/1d16e796-138f-4
 
 
 - main
+  -   - 21.01.2025 - 707f9a6 - Delete .github/workflows/generate_commits.py
+    - No description provided.
+  -   - 21.01.2025 - 8588453 - Update README with latest branch commits
+    - No description provided.
   -   - 21.01.2025 - 42200dd - Create generate_commits.py
-    - No description provided.
-  -   - 21.01.2025 - b7bdfde - Update README with latest branch commits
-    - No description provided.
-  -   - 21.01.2025 - 60e3764 - Update update_readme_svg.yml
     - No description provided.
 
 
