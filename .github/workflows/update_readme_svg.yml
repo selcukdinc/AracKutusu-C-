@@ -1,0 +1,93 @@
+name: Update README with Commit SVG
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch: # Manuel olarak tetiklemek için
+
+jobs:
+  update-readme-svg:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0 # Tüm branch'leri çeker
+
+      - name: Get Commit Data
+        run: |
+          git log --pretty=format:"%ad|%h|%s" --date=format:'%d.%m.%Y' > commits.txt
+
+      - name: Install Python Dependencies
+        run: |
+          pip install matplotlib
+      
+      - name: Generate SVG
+        run: |
+          python <<EOF
+import datetime
+
+def generate_svg(commits_file):
+    svg_lines = []
+    y_pos = 50
+    svg_lines.append('<svg width="600" height="400">')
+    svg_lines.append('<rect width="100%" height="100%" fill="lightblue" />')
+    svg_lines.append('<text x="20" y="30" font-size="20">Commit History</text>')
+
+    with open(commits_file, 'r') as f:
+        for commit_data in f:
+            date, hash, message = commit_data.strip().split('|')
+            date_obj = datetime.datetime.strptime(date, '%d.%m.%Y')
+            date_str = date_obj.strftime('%d %b %Y')
+            
+            svg_lines.append(f'<circle cx="50" cy="{y_pos}" r="10" fill="darkgreen" />')
+            svg_lines.append(f'<text x="80" y="{y_pos + 5}" font-size="12">{date_str} - {hash} - {message}</text>')
+            y_pos += 30
+
+    svg_lines.append('</svg>')
+    return '\\n'.join(svg_lines)
+
+if __name__ == "__main__":
+    svg_content = generate_svg("commits.txt")
+    with open("commits.svg", "w") as f:
+        f.write(svg_content)
+EOF
+
+      - name: Commit and Push Changes
+        run: |
+          git config --global user.name "GitHub Action Bot"
+          git config --global user.email "actions@github.com"
+          git add commits.svg
+          if ! git commit -m "Update SVG with latest commit history"; then
+              if [ $? -ne 0 ]; then
+                  echo "Error during commit"
+                  exit 1
+              else
+                  echo "No changes to commit"
+              fi
+          fi
+          git push origin main
+
+      - name: Update README
+        run: |
+          # Mevcut README içeriğini oku
+          existing_content=$(cat README.md)
+           # SVG içeriğini ekle
+          new_content="${existing_content}\n\n![Commit History](commits.svg)"
+          echo -e "${new_content}" > README.md
+        
+      - name: Commit and Push README
+        run: |
+          git config --global user.name "GitHub Action Bot"
+          git config --global user.email "actions@github.com"
+          git add README.md
+          if ! git commit -m "Update README with latest commit svg"; then
+            if [ $? -ne 0 ]; then
+                echo "Error during commit"
+                exit 1
+            else
+                echo "No changes to commit"
+            fi
+          fi
+          git push origin main
