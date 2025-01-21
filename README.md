@@ -12,11 +12,11 @@ https://github.com/selcukdinc/AracKutusu-CSharp/assets/149238218/1d16e796-138f-4
 
 
 - main
+  -   - 21.01.2025 - 79acd84 - Create generate_commits.py
+    - No description provided.
+  -   - 21.01.2025 - 0d53e0e - Update README with latest branch commits
+    - No description provided.
   -   - 21.01.2025 - 3ce296a - Update update_readme_svg.yml
-    - No description provided.
-  -   - 21.01.2025 - 4368f92 - Update README with latest branch commits
-    - No description provided.
-  -   - 21.01.2025 - abc7eb8 - Create update_readme_svg.yml
     - No description provided.
 
 
