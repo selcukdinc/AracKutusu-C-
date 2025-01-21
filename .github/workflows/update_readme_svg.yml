@@ -26,7 +26,7 @@ jobs:
       - name: Generate SVG
         run: |
           python <<EOF
-import datetime
+          import datetime
 
 def generate_svg(commits_file):
     svg_lines = []
